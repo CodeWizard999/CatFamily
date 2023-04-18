@@ -1,0 +1,41 @@
+<!-- this page displays the cat information -->
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Cat Family Information</title>
+<Link rel="stylesheet" th:href="@{/css/myStyle.css}">
+</head>
+<body>
+	<div id="main">
+		<header id="header">
+			<img th:alt="logo" th:src="@{/images/cat.png}" style="height:100%; width:50%; ">
+		</header>
+		<div class="topnav">
+			<a href="/">Home</a>
+			<a href="/addCustomer">Add New Customer</a>
+			<a href="/viewCustomer">View Customers</a>
+			<a href="/addCat">Add Cat to the Family</a>
+			<a href="/viewCat">View Cat Family</a>		
+		</div>
+	<h1 id="pageTitle">Cat Family:</h1><br><br><br>
+		<table id="view"> 
+			<tr>
+			<th>Name</th>
+			<th>Age</th>
+			<th>Gender</th>
+			<th>Price</th>
+			<th>Description</th>
+			</tr>
+			<tr th:each="cat: ${catList}">
+			<td th:text= "${cat.name}"></td>
+			<td th:text= "${cat.age}"></td>
+			<td th:text= "${cat.gender}"></td>
+			<td th:text= "${cat.price}"></td>
+			<td th:text= "${cat.desc}"></td>
+			</tr>
+		</table>
+	</div>
+	
+</body>
+</html>

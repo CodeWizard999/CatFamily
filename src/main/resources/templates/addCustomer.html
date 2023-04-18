@@ -1,0 +1,42 @@
+<!-- this page has a form that users fill about the customers -->
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Add New Customer</title>
+<Link rel="stylesheet" th:href="@{/css/myStyle.css}">
+</head>
+<body>
+	<div id="main">		
+		<header id="header">
+			<img th:alt="logo" th:src="@{/images/cat.png}" style="height:100%; width:50%; ">
+		</header>
+		<div class="topnav">
+			<a href="/">Home</a>
+			<a href="/addCustomer">Add New Customer</a>
+			<a href="/viewCustomer">View Customers</a>
+			<a href="/addCat">Add Cat to the Family</a>
+			<a href="/viewCat">View Cat Family</a>	
+		</div>
+		<h1 id="pageTitle">Add New Customer:</h1><br><br><br>
+			<form id="form" th:action="@{/proccessAddCustomer}" th:method="get" th:object = "${customer}">
+			
+			  <label for="fName" class="label">First name:</label>
+			  <input type="text" id="fName" th:field="*{fName}" class="input" autofocus><br><br><br>
+			  
+			  <label for="lName" class="label" >Last name:</label>
+			  <input type="text" id="lName" th:field="*{lName}" class="input"><br><br><br>
+
+			  <label for="email" class="label" >Email address:</label>
+			  <input type="text" id="email" th:field="*{email}" class="input"><br><br><br>
+			  
+			  <label for="phoneNo" class="label" >Phone number:</label>
+			  <input type="number" id="phoneNo" th:field="*{phoneNo}" class="input"><br><br><br>
+			  
+			  <input type="submit" value="Add" id="add"><br><br>
+			  
+			</form>
+	</div>
+	
+</body>
+</html>

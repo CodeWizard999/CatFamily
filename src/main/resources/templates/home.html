@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Home</title>
+<Link rel="stylesheet" th:href="@{/css/myStyle.css}">
+</head>
+<body>
+	<div id="main">
+		<header id="header">
+		<img th:alt="logo" th:src="@{/images/cat.png}" style="height:100%; width:50%; ">
+		</header>
+		<div class="topnav">
+			<a href="/">Home</a>
+			<a href="/addCustomer">Add New Customer</a>
+			<a href="/viewCustomer">View Customers</a>
+			<a href="/addCat">Add Cat to the Family</a>
+			<a href="/viewCat">View Cat Family</a>		
+		</div> 
+		<h1 id="pageTitle" style="	margin-bottom: -54px;">Welcome to Cat Family!</h1><br><br><br>
+		<img th:alt="cats" th:src="@{/images/catHeader.png}" style="height:20%; width:100% ; display: inline; ">
+		<br><h1 style="width: 30%; margin: 0 auto;color: white;text-shadow: -1px 0px 1px rgba(0,0,0,0.85); ">Do u like cats? </h1><br>
+		
+		<div id="article" style="background-color: #FDFFFF; width:80%; margin: 0 auto; border-radius:50px; ">
+			<p style="padding: 50px; font-weight: bold;">CatFamily is a simple Spring Boot application that helps you keep track of your customers and cats. With CatFamily, you can easily add new customers and cats by filling in simple forms, and view all of your records on separate pages.
+
+				If you're a cat lover or you own a business related to cats, CatFamily can help you stay organized and keep track of all of your important information. Whether you're a breeder, a pet store owner, or simply a cat enthusiast, CatFamily can make your life easier.
+				
+				So why not give CatFamily a try? It's easy to use, and it's completely free and open source. Plus, if you're a developer, you can even contribute to the project and help make it even better!</p>
+			 </div>
+			 <div style="width:80%; margin: 0 auto;">
+			 <img th:alt="cats" class="cats" th:src="@{/images/cat4.jpg}" >
+			 <img th:alt="cats" class="cats"th:src="@{/images/cat2.jpg}" >
+			<img th:alt="cats" class="cats" th:src="@{/images/cat3.jpg}" >
+			<img th:alt="cats" class="cats" th:src="@{/images/cat1.jpg}" >
+			</div>
+		<div style="background-color: #FDFFFF; width:80%; margin: 0 auto; border-radius:50px; ">
+			<p style="padding: 50px;">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut 
+			labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+			 nisi ut aliquip ex ea commodo consequat.
+			 Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+			 Excepteur sint occaecat cupidatat non proident, 
+			 sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+		</div>
+		<br><br><br><br><br><br><br><br>
+		<h3 style="float:right">by: fizza Imran.</h3>
+	</div>
+</body>
+</html>
